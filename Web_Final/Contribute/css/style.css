@@ -1,0 +1,91 @@
+h1{
+	font-family: 'Rubik One', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	color: gray;
+	font-size: 50px;
+	display: block;
+	padding-top: 30px;
+}
+
+nav{
+	margin: 0px 5px 0px 5px;
+}
+
+a.nav{
+	color: lightgray;
+	font-family: 'Black+Ops+One', arial;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+nav#left{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	color: gray;
+}
+
+nav#right{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	color: gray;
+}
+
+#enter{
+	border: solid 1px gray;
+	padding: 15px 20px 15px 20px;
+	background-color: grey;
+	display: block-line;
+	text-align: center;
+}
+
+a#enter{
+	color: white;
+	font-family: 'Black+Ops+One', arial;
+	text-transform: uppercase;
+	margin: 10px 5px 50px 5px;
+	font-size: 9pt;
+}
+
+a#enter:link {
+    text-decoration: none;
+}
+
+a#enter:visited {
+    text-decoration: none;
+}
+
+a#enter:hover {
+	text-decoration: underline;
+}
+
+a#enter:active {
+	text-decoration: underline;
+}
+
+a.footer{
+	color: lightgray;
+	font-family: 'Black+Ops+One', arial;
+	text-transform: uppercase;
+	margin: 10px 5px 50px 5px;
+	font-size: 9pt;
+}
+
+a.footer:link {
+    text-decoration: none;
+}
+
+a.footer:visited {
+    text-decoration: none;
+}
+
+a.footer:hover {
+	text-decoration: underline;
+}
+
+a.footer:active {
+	text-decoration: underline;
+}

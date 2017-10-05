@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+}
+/*h1{
+	text-align:center;
+	width: 100%;
+	letter-spacing: 5px;
+	position: absolute;
+	top: 50% * height;
+	font-size: 100px;
+	z-index: 2;
+	color: white;
+	opacity: 0.5;
+}*/
+
+#style-names{
+	z-index: 1;
+	font-family: 'Space Mono', monospace;
+    font-size: 30px;
+}
+
+#style-names img{
+    margin-top: -6px;
+    margin-bottom: -6px;
+}
+
+#container1{
+	position: relative;
+	top: 0;
+	left: 0;
+  /*  height: 58vh;*/
+}
+#minimalist{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    /*width: 50%;*/
+    text-align: center;
+}
+
+#container2{
+	position: relative;
+	top: 0;
+	left: 0;
+   /* height: 57vh;*/
+
+}
+#chic{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    /*width: 50%;*/
+    text-align: center;
+}
+
+#container3{
+	position: relative;
+	top: 0;
+	left: 0;
+    /*height: 58vh;*/
+}
+#container3 img{
+    margin-bottom: -12px;
+}
+#glamourous{
+	position: absolute;
+    bottom: 30%;
+    left: 75%;
+    /*width: 50%;*/
+    text-align: center;
+}
+
+a.names:link {
+    color: transparent;
+    -webkit-text-stroke:1px white;
+    text-decoration: none;
+}
+
+a.names:visited {
+    color: transparent;
+    -webkit-text-stroke:1px white;
+    text-decoration: none;
+}
+
+a.names:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a.names:active {
+    color: white;
+    text-decoration: none;
+}
+
+
+#exp-con{
+	font-size: 40px;
+	z-index: 2;
+	font-family: 'Rubik One', sans-serif;
+	text-transform: uppercase;
+}
+
+#explore{
+/*	position: fixed;
+    top: 45%;
+    left: 10%;
+    text-align: center;*/
+    position: fixed;
+  	top: 50%;
+  	left: 25%;
+  	transform: translate(-50%, -50%);
+    border:solid 3px white; 
+}
+
+#contribute{
+	position: fixed;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    border:solid 3px white; 
+}
+
+a.main:link {
+    color: white;
+    text-decoration: none;
+}
+
+
+a.main:visited {
+    color: white;
+    text-decoration: none;
+}
+
+
+a.main:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255,255, 255, 0.5);
+}
+
+
+a.main:active {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255,255, 255, 0.5);
+}

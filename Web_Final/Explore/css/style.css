@@ -1,0 +1,191 @@
+h1{
+	font-family: 'Rubik One', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	color: gray;
+	font-size: 50px;
+	display: block;
+	padding-top: 30px;
+}
+
+nav{
+	margin: 0px 5px 0px 5px;
+}
+
+a.nav{
+	color: lightgray;
+	font-family: 'Black+Ops+One', arial;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+nav#left{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	color: gray;
+}
+
+nav#right{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	color: gray;
+}
+/*search bar*/
+#searchBar{
+	width: 535px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	height: auto;
+	display: block;
+/*	background-color: #e2e2e2;*/
+}
+
+#newSearch{
+	width: 445px;
+	height: 35px;
+	background-color: white;
+	border: solid 3px lightgray;
+	color: lightgray;
+	font-size: 17px;
+}
+
+#newSearch:focus{
+	outline: none;
+}
+
+#searchButton{
+	height: 43px;
+	width: 75px;
+	margin-top: 0px;
+	padding-top: 3px; 
+	float: right;
+	background-color: white;
+	border: solid 3px lightgray;
+	font-family: 'Space Mono', monospace;
+	font-size: 14px;
+	color: lightgray;
+	text-align: center;
+}
+
+#searchList{
+	margin-top: 30px;
+}
+
+.search{
+	margin-top: 10px;
+	width:503px;
+	padding: 1px;
+	background-color: white;
+}
+
+.search p{
+	width: 400px;
+	height: 20px;
+	background-color: white;
+	margin: 5px;
+	font-size: 16px;
+	padding-top: 3px;
+	padding-left: 5px;
+	font-family: 'Space Mono', monospace;
+}
+
+/*Tags cloud*/
+a.tags{
+	font-family: 'Space Mono', monospace;
+	color: gray;
+}
+
+a.tags:link {
+    text-decoration: none;
+}
+
+a.tags:visited {
+    text-decoration: none;
+}
+
+a.tags:hover {
+	opacity: 0.75;
+}
+
+a.tags:active {
+	text-decoration: underline;
+}
+
+#tagsCloud{
+	display: block;
+/*	position: absolute;
+	width: 100vw;
+	left: 0vw;*/
+/*	top: 40%;
+	height: 500px;
+	width: 900px;*/
+/*	display: inline-block;*/
+}
+
+#tagsCloud1{
+	position: relative;
+	left: 15%;
+	margin: 10px;
+/*	top: 15%;*/
+}
+
+#tagsCloud2{
+	position: relative;
+	left: -15%;
+	margin: 10px;
+/*	top: 20%;*/
+}
+
+#tagsCloud3{
+	position: relative;
+	left: -5%;
+	margin: 10px;
+/*	top: 25%;*/
+}
+
+a#tag4{
+	position: relative;
+	left: 80%;
+	margin: 10px;
+/*	top: 30%;*/
+}
+
+a#tag5{
+	position: relative;
+	left:20%; 
+	margin: 10px;
+/*	top: 35vw;*/
+}
+
+#img-link{
+	position: relative;
+	left: -45%;
+}
+
+a.footer{
+	color: lightgray;
+	font-family: 'Black+Ops+One', arial;
+	text-transform: uppercase;
+	margin: 10px 5px 50px 5px;
+	font-size: 9pt;
+}
+
+a.footer:link {
+    text-decoration: none;
+}
+
+a.footer:visited {
+    text-decoration: none;
+}
+
+a.footer:hover {
+	text-decoration: underline;
+}
+
+a.footer:active {
+	text-decoration: underline;
+}
