@@ -12,7 +12,7 @@ html {
 	width: 100px;
 	height: 100px;
 	
-	background: ;
+	background: transparent;
 }
 
 #circle {
@@ -29,7 +29,7 @@ html {
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 /* Cleaner, but slightly less support: use "50%" as value */
-	background: ;
+	background: transparent;
 }
 
 
@@ -46,15 +46,15 @@ html {
 
 	border-left-style: solid;
 	border-left-color: transparent;
-	border-left-width: 25vh;
+	border-left-width: 0vh;
 
 	border-right-style: solid;
 	border-right-color: transparent;
-	border-right-width: 25vh;
+	border-right-width: 0vh;
 
 	border-bottom-style: solid;
-	border-bottom-width: 50vh;
-	border-bottom-color: ;
+	border-bottom-width: 0vh;
+	border-bottom-color: transparent;
 }
 
 
