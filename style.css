@@ -1,0 +1,20 @@
+#sentenceContainer {
+    height: 100vh;
+    position: relative }
+
+.sentence{
+	z-index: 4;
+	color: black;
+	font-family: 'Overpass Mono', monospace;
+    font-size: 2em;
+    /*font-weight: bold;*/
+}
+
+#sentence1{
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
