@@ -5,9 +5,9 @@
 .sentence{
 	z-index: 4;
 	color: black;
-	font-family: 'Overpass Mono', monospace;
+	font-family: 'Montserrat', sans-serif;
     font-size: 2em;
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
 #sentence1{
