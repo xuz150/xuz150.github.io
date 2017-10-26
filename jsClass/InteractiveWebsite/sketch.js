@@ -127,6 +127,7 @@ function draw(){
   	t = "Press any key to shuffle the colors. Click the mouse to shuffle the visualizations.";
 	fill(255, 255, 255);
 	textAlign(CENTER);
+	textSize(18);
 	text(t, windowWidth/2, windowHeight - 20);
 
 	// t2 = ""
