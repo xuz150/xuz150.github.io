@@ -1,4 +1,4 @@
-alert("Welcome to this Geometry Music Viz Photo Booth! Please allow the access to your microphone for the music visualization and to your camera for the photo booth. Let's get started by playing your favorite song or just sing by yourself!");
+alert("Welcome to this Geometry Music Viz Webcam! Please allow the access to your microphone and camera. Let's get started by playing your favorite song or just sing by yourself!");
 
 // Mic and Webcam
 var mic;
