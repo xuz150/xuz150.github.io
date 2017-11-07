@@ -114,8 +114,15 @@ function setup(){
 
 
 function draw(){
+// flip webcam (mirrow)
+	push();
+	translate(capture.width,0);
+	scale(-1.0,1.0); 
 // display webcam
+  	// image(capture, 0, 0);
   	image(capture, 0, 0, windowWidth, windowWidth * capture.height/capture.width);
+// flip webcam (mirrow)
+	pop();
 
 	// webcam color filter
 	noStroke();
