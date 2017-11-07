@@ -124,7 +124,8 @@ function draw(){
   	// filter(DILATE);
 
 // display text instructions
-  	t = "Press any key to shuffle the colors. Click the mouse to shuffle the visualizations.";
+	t = "Press the LEFT arrow key to shuffle the colors. Press the RIGHT arrow key to shuffle the visualizations.";
+  	// t = "Press any key to shuffle the colors. Click the mouse to shuffle the visualizations.";
 	fill(255, 255, 255);
 	textAlign(CENTER);
 	textSize(14);
@@ -181,6 +182,8 @@ function draw(){
 
 
 function keyPressed(){
+
+if (keyCode === LEFT_ARROW) {
 // shuffle color
 	r0 = random(0,255);
 	g0 = random(0,255);
@@ -211,8 +214,8 @@ function keyPressed(){
 	b6 = random(0,255); 
 }
 
-
-function mouseClicked() {
+if (keyCode === RIGHT_ARROW) {
+	// function mouseClicked() {
 // shuffle sizes and locations
 // sizes (used to map volume)
 	w = random(windowWidth*0.2, windowWidth*0.8);
@@ -242,4 +245,6 @@ function mouseClicked() {
 // 	y1 = random(windowHeight*0.2, windowHeight*0.8);
 // 	x2 = x1 + random(windowWidth*0.25 windowWidth*0.5);
 // 	y2 = y2 + random(windowHeight*0.25, windowHeight*0.5);
+}
+
 }
