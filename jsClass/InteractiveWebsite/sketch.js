@@ -51,11 +51,6 @@ function setup(){
   	capture.size(windowWidth, windowHeight);
   	capture.hide();
 
-  	s = "The quick brown fox jumped over the lazy dog.";
-	fill(50);
-	text(s, 10, 10, 100, 100);
-
-
 // initial sizes and locations
 // sizes (used to map volume)
 	w = random(windowWidth*0.2, windowWidth*0.8);
