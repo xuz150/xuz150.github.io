@@ -116,7 +116,7 @@ function setup(){
 function draw(){
 // flip webcam (mirrow)
 	push();
-	translate(capture.width,0);
+	translate(windowWidth,0);
 	scale(-1.0,1.0); 
 // display webcam
   	// image(capture, 0, 0);
