@@ -1,4 +1,4 @@
-// alert("Welcome to this Frequency Spectrum Music Viz Webcam! Please allow the access to your microphone and camera. Let's get started by playing your favorite song or just sing by yourself!");
+alert("Welcome to this Frequency Spectrum Music Viz Webcam! Please allow the access to your microphone and camera. Let's get started by playing your favorite song or just sing by yourself!");
 
 // Mic and Webcam
 var mic;
