@@ -1,8 +1,37 @@
+div{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
 #form{
 	margin: 0;
     position: absolute;
-    top: 150px;
+    bottom: 2%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+#city{
+	width: 250px;
+	height: 24px;
+	border: 4px solid black;
+	margin-right:5px;
+	padding-left: 4px;
+	color: black;
+	background-color: white;
+}
+
+#submit{
+    width: 100px;
+    height: 32px;
+    border: 0px solid black;
+    border-radius: 0px;
+    margin-left: 5px;
+    padding: 0px;
+    color: white;   
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: black;
+    cursor: pointer;
 }

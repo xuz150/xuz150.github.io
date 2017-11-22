@@ -1,4 +1,4 @@
-alert('Type a city name and visualize its humidity and cloudiness!')
+// alert('Search a city and visualize its weather!')
 
 var weatherData;
 var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
@@ -14,7 +14,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   var button = select('#submit');
-  button.mousePressed(weatherAsk);
+  button.mouseClicked(weatherAsk);
 
   input = select('#city');
 
@@ -78,14 +78,13 @@ function draw() {
   // fill(238,197,215);
   // text(cityName.toUpperCase() + "    " + weatherData.main.temp + " °F    " + weatherData.weather[0].description, windowWidth/2+3, 100+3);
   // fill(58,65,165)
-
   fill(255);
   strokeWeight(4);
   stroke(0);
-  text(cityName.toUpperCase() + "    " + weatherData.main.temp + " °F    " + weatherData.weather[0].description, windowWidth/2 + 3, 100 + 3);
+  text(cityName.toUpperCase() + "    " + weatherData.main.temp + " °F    " + weatherData.weather[0].description, windowWidth/2 + 3, windowHeight*0.1 + 3);
   fill(0);
   stroke(0);
-  text(cityName.toUpperCase() + "    " + weatherData.main.temp + " °F    " + weatherData.weather[0].description, windowWidth/2, 100);
+  text(cityName.toUpperCase() + "    " + weatherData.main.temp + " °F    " + weatherData.weather[0].description, windowWidth/2, windowHeight*0.1);
 
   noStroke();
   // HUMIDITY
