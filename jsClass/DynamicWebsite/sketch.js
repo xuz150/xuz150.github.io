@@ -1,6 +1,8 @@
+alert('Type a city name and visualize its humidity and cloudiness!')
+
 var weatherData;
 var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
-var apiKey = '&APPID=001b0f58045147663b1ea518d34d88b4';
+var apiKey = '&APPID=665b2a7cd43935d54a33c386e5506865';
 var units = '&units=imperial';
 var input;
 
