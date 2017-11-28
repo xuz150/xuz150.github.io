@@ -6,7 +6,7 @@ var apiKey = '&APPID=665b2a7cd43935d54a33c386e5506865';
 var units = '&units=imperial';
 var input;
 var cityName;
-var welcomeText1 = "ENTER A CITY NAME";
+var welcomeText1 = "SUBMIT A CITY NAME";
 var welcomeText2 = "AND VISUALIZE ITS PRESENT";
 var welcomeText3 = "HUMIDITY AND CLOUDINESS.";
 
