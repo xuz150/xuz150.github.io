@@ -6,6 +6,9 @@ var apiKey = '&APPID=665b2a7cd43935d54a33c386e5506865';
 var units = '&units=imperial';
 var input;
 var cityName;
+var welcomeText1 = "ENTER A CITY NAME";
+var welcomeText2 = "AND VISUALIZE ITS PRESENT";
+var welcomeText3 = "HUMIDITY AND CLOUDINESS.";
 
 // var soundB, soundW;
 // var imgCloud;
@@ -55,6 +58,40 @@ function draw() {
   rect(windowWidth/8*6, 0, 5, windowHeight);
   rect(windowWidth/8*7, 0, 5, windowHeight);
 
+  // WELCOME SENTENCE
+  textStyle(ITALIC);
+  textAlign(CENTER);
+  textSize(80);
+  
+  fill(255);
+  strokeWeight(4);
+  stroke(0);
+  
+  text(welcomeText1, windowWidth/2 + 3, windowHeight/2 - 100 + 3);
+  fill(0);
+  stroke(0);
+  text(welcomeText1, windowWidth/2, windowHeight/2 - 100);
+
+  fill(255);
+  strokeWeight(4);
+  stroke(0);
+  
+  text(welcomeText2, windowWidth/2 + 3, windowHeight/2 + 3);
+  fill(0);
+  stroke(0);
+  text(welcomeText2, windowWidth/2, windowHeight/2);
+
+  fill(255);
+  strokeWeight(4);
+  stroke(0);
+  
+  text(welcomeText3, windowWidth/2 + 3, windowHeight/2 + 100 + 3);
+  fill(0);
+  stroke(0);
+  text(welcomeText3, windowWidth/2, windowHeight/2 + 100);
+
+
+  // WEATHER ASK
   if (weatherData) {
   // // TEMP MIN TO MAX
   //     text(weatherData.main.temp_min + " - " + weatherData.main.temp_max, windowWidth/2, 200);
@@ -64,6 +101,11 @@ function draw() {
 
   // // DESCRIPTION
   //     text(weatherData.weather[0].description, windowWidth/2, 250)
+  
+  // CLEAR WELCOME TEXT
+  welcomeText1 = " ";
+  welcomeText2 = " ";
+  welcomeText3 = " ";
 
   rectMode(CENTER);
   // fill(156, 160, 205);
