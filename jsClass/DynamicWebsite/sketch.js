@@ -61,7 +61,7 @@ function draw() {
   // WELCOME SENTENCE
   textStyle(ITALIC);
   textAlign(CENTER);
-  textSize(80);
+  textSize(80 * windowWidth/1280);
   
   fill(255);
   strokeWeight(4);
