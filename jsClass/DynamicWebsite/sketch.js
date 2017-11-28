@@ -1,7 +1,7 @@
 // alert('Search a city and visualize its weather!')
 
 var weatherData;
-var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
+var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
 var apiKey = '&APPID=665b2a7cd43935d54a33c386e5506865';
 var units = '&units=imperial';
 var input;
