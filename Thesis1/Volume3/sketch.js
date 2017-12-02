@@ -1,4 +1,8 @@
-alert("Welcome to this Geometry Music Viz Webcam! Please allow the access to your microphone and camera. Let's get started by playing your favorite song or just sing by yourself!");
+// alert("Welcome to this Geometry Music Viz Webcam! Please allow the access to your microphone and camera. Let's get started by playing your favorite song or just sing by yourself!");
+
+// Tracking
+var colors;
+var trackingData;
 
 // Mic and Webcam
 var mic;
@@ -38,15 +42,34 @@ var sW;
 
 function setup(){
 	createCanvas(windowWidth, windowHeight);
-
+// get audio via mic
 	mic = new p5.AudioIn();
 	mic.start();
 
 	rectMode(CENTER);
-
+// capture the webcam
 	capture = createCapture(VIDEO);
   	capture.size(windowWidth, windowHeight);
-  	capture.hide();
+  	// capture.hide(); // hide the original webcam capture at buttom
+
+ // tracking related
+ 	capture.style('opacity',0)// use this to hide the capture later on (change to 0 to hide)...	
+  	capture.id("myVideo"); //give the capture an ID so we can use it in the tracker below.
+  	
+  	tracking.ColorTracker.registerColor('red', function(r, g, b) {
+  		if (r > 100 && g < 50 && b < 50) {
+  			return true;
+  		}
+  		return false;
+  	});
+
+  	colors = new tracking.ColorTracker(['red']);
+  	tracking.track('#myVideo', colors); // start the tracking of the colors above on the camera in p5
+
+  //start detecting the tracking
+  	colors.on('track', function(event) { //this happens each time the tracking happens
+    	trackingData = event.data // break the trackingjs data into a global so we can access it with p5
+  	});
 
 // initial sizes and locations
 // sizes (used to map volume)
@@ -127,44 +150,102 @@ function draw(){
 
 // get volume
 	var vol = mic.getLevel();
-	console.log(vol);
+	// console.log(vol);
 
-// circle
+// // circle
+// 	noStroke();
+// 	fill(r1, g1, b1, 128);
+// 	var radius = map(vol, 0, 1, h, w);
+// 	ellipse(circleCenterX, circleCenterY, radius, radius);
+
+// // square
+// 	noStroke();
+// 	fill(r2, b2, g2, 128);
+// 	var lengthS = map(vol, 0, 1, h, w);
+// 	rect(squareCenterX, squareCenterY, lengthS, lengthS);
+
+// // triangle
+// 	noStroke();
+// 	fill(r3, g3, b3, 128);
+// 	var lengthT = map(vol, 0, 1, h, w);
+// 	triangle(triangleCenterX, triangleCenterY - sqrt(3)/3*lengthT, triangleCenterX - lengthT/2, triangleCenterY + sqrt(3)/6*lengthT, triangleCenterX + lengthT/2,triangleCenterY + sqrt(3)/6*lengthT);
+
+// // circle frame
+// 	noFill();
+// 	stroke(r4, g4, b4);
+// 	strokeWeight(sW);
+// 	ellipse(circleCenterXf, circleCenterYf, radius, radius);
+
+// // square frame
+// 	noFill();
+// 	stroke(r5, g5, b5);
+// 	strokeWeight(sW);
+// 	rect(squareCenterXf, squareCenterYf, lengthS, lengthS);
+
+// // triangle frame
+// 	noFill();
+// 	stroke(r6, g6, b6);
+// 	strokeWeight(sW);
+// 	triangle(triangleCenterXf, triangleCenterYf - sqrt(3)/3*lengthT, triangleCenterXf - lengthT/2, triangleCenterYf + sqrt(3)/6*lengthT, triangleCenterXf + lengthT/2,triangleCenterYf + sqrt(3)/6*lengthT);
+
+// tracking related 
+  //console.log(trackingData);
+  if(trackingData){ //if there is tracking data to look at, then...
+    for (var i = 0; i < trackingData.length; i++) { //loop through each of the detected colors
+    	console.log(trackingData.length)
+      // console.log( trackingData[i] ) //{width: 151, height: 261, x: 200, y: 32, color: "magenta}
+      // fill(255,255,0);
+      // rect(trackingData[i].x,trackingData[i].y,trackingData[i].width,trackingData[i].height)
+
+   	// flip visualizations (mirrow)
+	push();
+	translate(windowWidth,0);
+	scale(-1.0,1.0); 
+	// display visualizations
+
+    // circle
 	noStroke();
 	fill(r1, g1, b1, 128);
 	var radius = map(vol, 0, 1, h, w);
-	ellipse(circleCenterX, circleCenterY, radius, radius);
+	ellipse(trackingData[0].x-50,trackingData[0].y-50, radius, radius);
 
 // square
 	noStroke();
 	fill(r2, b2, g2, 128);
 	var lengthS = map(vol, 0, 1, h, w);
-	rect(squareCenterX, squareCenterY, lengthS, lengthS);
+	rect(trackingData[0].x+50,trackingData[0].y+50, lengthS, lengthS);
 
 // triangle
 	noStroke();
 	fill(r3, g3, b3, 128);
 	var lengthT = map(vol, 0, 1, h, w);
-	triangle(triangleCenterX, triangleCenterY - sqrt(3)/3*lengthT, triangleCenterX - lengthT/2, triangleCenterY + sqrt(3)/6*lengthT, triangleCenterX + lengthT/2,triangleCenterY + sqrt(3)/6*lengthT);
+	triangle(trackingData[0].x, trackingData[0].y - sqrt(3)/3*lengthT, trackingData[0].x - lengthT/2, trackingData[0].y + sqrt(3)/6*lengthT, trackingData[0].x + lengthT/2,trackingData[0].y + sqrt(3)/6*lengthT);
 
 // circle frame
 	noFill();
 	stroke(r4, g4, b4);
 	strokeWeight(sW);
-	ellipse(circleCenterXf, circleCenterYf, radius, radius);
+	ellipse(trackingData[0].x+70, trackingData[0].y+70, radius, radius);
 
 // square frame
 	noFill();
 	stroke(r5, g5, b5);
 	strokeWeight(sW);
-	rect(squareCenterXf, squareCenterYf, lengthS, lengthS);
+	rect(trackingData[0].x-70, trackingData[0].y-70, lengthS, lengthS);
 
 // triangle frame
 	noFill();
 	stroke(r6, g6, b6);
 	strokeWeight(sW);
-	triangle(triangleCenterXf, triangleCenterYf - sqrt(3)/3*lengthT, triangleCenterXf - lengthT/2, triangleCenterYf + sqrt(3)/6*lengthT, triangleCenterXf + lengthT/2,triangleCenterYf + sqrt(3)/6*lengthT);
+	triangle(trackingData[0].x*0.9, trackingData[0].y*0.9- sqrt(3)/3*lengthT, trackingData[0].x*0.9 - lengthT/2, trackingData[0].y*0.9 + sqrt(3)/6*lengthT, trackingData[0].x*0.9 + lengthT/2,trackingData[0].y*0.9 + sqrt(3)/6*lengthT);	
 
+	// flip vosualizations (mirrow)
+	pop();
+    }
+
+}
+
+// based on volume make changes
 // shuffle color
 	if (vol >= 0.25) {
 	r0 = random(0,255);
@@ -219,11 +300,11 @@ function draw(){
 
 //stroke weight
 	sW = random(2,8);
-}
-}
+	}
+}	
 
 function keyPressed(){
-	r0 = random(0,255);
+		r0 = random(0,255);
 	g0 = random(0,255);
 	b0 = random(0,255); 
 
@@ -275,4 +356,4 @@ function keyPressed(){
 
 //stroke weight
 	sW = random(2,8);
-}	
+}

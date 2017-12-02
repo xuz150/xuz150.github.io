@@ -198,12 +198,7 @@ console.log(spectrum[512]);
 	g6 = random(0,255);
 	b6 = random(0,255); 
 
-
-
-
 // shuffle positions and strokes
-
-
 	y1 = random(windowHeight*0.5, windowHeight*0.9);
 	y2 = random(windowHeight*0.5, windowHeight*0.9);
 	y3 = random(windowHeight*0.5, windowHeight*0.9);
@@ -249,12 +244,7 @@ function keyPressed(){
 	g6 = random(0,255);
 	b6 = random(0,255); 
 
-
-
-
 // shuffle positions and strokes
-
-
 	y1 = random(windowHeight*0.5, windowHeight*0.9);
 	y2 = random(windowHeight*0.5, windowHeight*0.9);
 	y3 = random(windowHeight*0.5, windowHeight*0.9);
