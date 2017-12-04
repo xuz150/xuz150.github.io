@@ -1,0 +1,30 @@
+#button{
+	margin: 0;
+	position: absolute;
+	bottom: 5px;
+	left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;;
+	font-size: 18px;
+	font-family: arial black;
+	border: solid black;
+	color: black;
+	cursor: pointer;
+	padding: 4px;
+}
+
+#guide{
+	margin: 0;
+	position: absolute;
+	bottom: 65px;
+	left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;;
+	font-size: 18px;
+	font-family: arial black;
+	color: black;
+}
+
+
