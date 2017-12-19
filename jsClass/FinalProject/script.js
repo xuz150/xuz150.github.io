@@ -20,12 +20,13 @@ $(document).ready(function(){
 													$("#bio").slideDown(2000, "swing");
 													$("#button").slideDown(2000, "swing");
 
-											    	$("#zrx").fadeOut(2000, "swing")
-        											$("#downArrow").fadeOut("fast", "swing")
-        								 			// }
+											    	$("#zrx").fadeOut(2000, "swing");
+        											$("#downArrow").fadeOut("fast", "swing");
+
+        											$("#back").slideDown(1000, "swing");
 												});
 
-												
+
 										});
 									});
 								});
