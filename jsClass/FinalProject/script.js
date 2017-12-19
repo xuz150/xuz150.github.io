@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var time1 = 300;
+	var time1 = 500;
 	$("#hello").fadeIn(time1, function(){
 		$("#hello").fadeOut(time1, function(){
 			$("#my").fadeIn(time1, function(){
@@ -8,9 +8,10 @@ $(document).ready(function(){
 						$("#name").fadeOut(time1, function(){
 							$("#is").fadeIn(time1, function(){
 								$("#is").fadeOut(time1, function(){
-									$("#zrx").fadeIn(1000, function(){
+									$("#zrx").fadeIn(2000, "swing")
+									$("#square").slideUp(2000, "swing", function(){
 										
-											$("#downArrow").fadeIn("fast", function(){
+											$("#downArrow").fadeIn("fast", "swing", function(){
 
 
 												$(window).scroll(function() {
@@ -20,13 +21,13 @@ $(document).ready(function(){
 													// $("#bio").effect("slide", {direction: "down", mode: "show", duration: 1000})
 													// $("#bio").show("slide", { direction: "down", duration:  1000});
 													// $("#bio").animate({opacity: "1"}, 2000);
-													$("#bio").slideDown("slow");
-													$("#button").slideDown("slow");
+													$("#bio").slideDown(2000, "swing");
+													$("#button").slideDown(2000, "swing");
 													// $("body").animate({backgroundColor: "red"}, 2000);
 													// $("#bio").show(1000,"swing");
 										
-											    	$("#zrx").fadeOut("slow")
-        											$("#downArrow").fadeOut("fast")
+											    	$("#zrx").fadeOut(2000, "swing")
+        											$("#downArrow").fadeOut("fast", "swing")
         											
         											// });
         											
