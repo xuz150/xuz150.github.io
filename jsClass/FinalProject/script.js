@@ -10,32 +10,23 @@ $(document).ready(function(){
 								$("#is").fadeOut(time1, function(){
 									$("#zrx").fadeIn(2000, "swing")
 									$("#square").slideUp(2000, "swing", function(){
-										
 											$("#downArrow").fadeIn("fast", "swing", function(){
 
-
+												
 												$(window).scroll(function() {
-													// $("#inner").slideToggle();
-													// $("#bio").show( "slide", {direction: "down" }, 5000 );
-													// $("#bio").effect('slide', { direction: 'right', mode: 'show' });
-													// $("#bio").effect("slide", {direction: "down", mode: "show", duration: 1000})
-													// $("#bio").show("slide", { direction: "down", duration:  1000});
+													if ($(this).scrollTop()>0){
 													// $("#bio").animate({opacity: "1"}, 2000);
+													// $("#bio").show(1000,"swing");
 													$("#bio").slideDown(2000, "swing");
 													$("#button").slideDown(2000, "swing");
-													// $("body").animate({backgroundColor: "red"}, 2000);
-													// $("#bio").show(1000,"swing");
-										
+
 											    	$("#zrx").fadeOut(2000, "swing")
         											$("#downArrow").fadeOut("fast", "swing")
-        											
-        											// });
-        											
-        										});
-        								
-    											
+
+
+        								 		}
 											});
-										
+										});
 									});
 								});
 							});
