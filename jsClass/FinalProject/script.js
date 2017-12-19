@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 												
 												$(window).scroll(function() {
-													if ($(this).scrollTop()>0){
+													// if ($(this).scrollTop()>0){
 													// $("#bio").animate({opacity: "1"}, 2000);
 													// $("#bio").show(1000,"swing");
 													$("#bio").slideDown(2000, "swing");
@@ -22,10 +22,10 @@ $(document).ready(function(){
 
 											    	$("#zrx").fadeOut(2000, "swing")
         											$("#downArrow").fadeOut("fast", "swing")
+        								 			// }
+												});
 
-
-        								 		}
-											});
+												
 										});
 									});
 								});

@@ -176,6 +176,7 @@ i {
 }
 
 #me{
+/*    opacity: 0.9;*/
     z-index: -5;
     margin: 0;
     position: absolute;
