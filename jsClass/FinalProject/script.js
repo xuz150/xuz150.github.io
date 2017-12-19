@@ -23,7 +23,7 @@ $(document).ready(function(){
 											    	$("#zrx").fadeOut(2000, "swing");
         											$("#downArrow").fadeOut("fast", "swing");
 
-        											$("#back").slideDown(1000, "swing");
+        											// $("#back").slideDown(1000, "swing");
 												});
 
 

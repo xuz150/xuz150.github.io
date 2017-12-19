@@ -117,7 +117,7 @@ i {
 
 #bio{
 /*	color: #f01528;*/
-    color: white;
+    color: black;
 	font-family: 'Roboto', sans-serif;
 	font-size: 8vmin;
 	text-align: center;
@@ -148,7 +148,7 @@ i {
     height: 50px;
     color: white;
     background-color: black;
-    border: 4px solid white;
+    border: 4px solid black;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;    
@@ -187,7 +187,7 @@ i {
     transform: translate(-50%, -50%);
 }
 
-#back{
+/*#back{
     z-index: -1;
     margin: 0;
     position: absolute;
@@ -197,4 +197,4 @@ i {
     height: 150vh;
     background-color: black;
     display: none;
-}
+}*/
