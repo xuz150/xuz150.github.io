@@ -98,19 +98,18 @@ function draw(){
   	// filter(DILATE);
 
 // display text instructions
-	// t = "Press any key to shuffle the visualizations.";
- //  	// t = "Press any key to shuffle the colors. Click the mouse to shuffle the visualizations.";
+	t = "Press the LEFT arrow key to shuffle the colors. Press the RIGHT arrow key to shuffle the visualizations.";
+  	// t = "Press any key to shuffle the colors. Click the mouse to shuffle the visualizations.";
+	fill(255, 255, 255);
+	textAlign(CENTER);
+	textSize(14);
+	text(t, windowWidth/2, windowHeight - 20);
+	// t2 = ""
 	// fill(255, 255, 255);
-	// textAlign(CENTER);
-	// textSize(14);
-	// text(t, windowWidth/2, windowHeight - 20);
-	// // t2 = ""
-	// // fill(255, 255, 255);
-	// // text(t2, windowWidth - 100, windowHeight - 100, windowWidth - 100 - 200, windowHeight - 100 - 200);
+	// text(t2, windowWidth - 100, windowHeight - 100, windowWidth - 100 - 200, windowHeight - 100 - 200);
 
 // get frequency spectrum	
 var spectrum = fft.analyze();
-console.log(spectrum[512]);
 // 1	
 	beginShape();
 	stroke(r1,g1,b1, 128)
@@ -166,9 +165,13 @@ console.log(spectrum[512]);
 	}
 	endShape();
 
+}
 
-// shuffle colors
-	if (spectrum[512] >= 100) {
+
+function keyPressed(){
+
+	// shuffle colors
+	if (keyCode === LEFT_ARROW) {
 
 	r0 = random(0,255);
 	g0 = random(0,255);
@@ -197,12 +200,10 @@ console.log(spectrum[512]);
 	r6 = random(0,255);
 	g6 = random(0,255);
 	b6 = random(0,255); 
+}
 
-
-
-
-// shuffle positions and strokes
-
+	// shuffle positions and strokes
+	if (keyCode === RIGHT_ARROW) {
 
 	y1 = random(windowHeight*0.5, windowHeight*0.9);
 	y2 = random(windowHeight*0.5, windowHeight*0.9);
@@ -218,54 +219,5 @@ console.log(spectrum[512]);
 	s5 = random(1,10);
 	s6 = random(1,10);
 	}
-}
 
-function keyPressed(){
-	r0 = random(0,255);
-	g0 = random(0,255);
-	b0 = random(0,255); 
-
-	r1 = random(0,255);
-	g1 = random(0,255);
-	b1 = random(0,255);
-
-	r2 = random(0,255);
-	g2 = random(0,255);
-	b2 = random(0,255);
-
-	r3 = random(0,255);
-	g3 = random(0,255);
-	b3 = random(0,255); 
-
-	r4 = random(0,255);
-	g4 = random(0,255);
-	b4 = random(0,255); 
-
-	r5 = random(0,255);
-	g5 = random(0,255);
-	b5 = random(0,255); 
-
-	r6 = random(0,255);
-	g6 = random(0,255);
-	b6 = random(0,255); 
-
-
-
-
-// shuffle positions and strokes
-
-
-	y1 = random(windowHeight*0.5, windowHeight*0.9);
-	y2 = random(windowHeight*0.5, windowHeight*0.9);
-	y3 = random(windowHeight*0.5, windowHeight*0.9);
-	y4 = random(windowHeight*0.5, windowHeight*0.9);
-	y5 = random(windowHeight*0.5, windowHeight*0.9);
-	y6 = random(windowHeight*0.5, windowHeight*0.9);
-
-	s1 = random(1,10);
-	s2 = random(1,10);
-	s3 = random(1,10);
-	s4 = random(1,10);
-	s5 = random(1,10);
-	s6 = random(1,10);
 }
